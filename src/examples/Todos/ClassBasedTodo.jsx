@@ -38,6 +38,7 @@ class ClassBasedTodo extends Component {
         Add a new Task :
         <input
           type="text"
+          placeholder="Enter a new Task"
           onChange={this.handleChange}
           value={this.state.inputValue}
         />

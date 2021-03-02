@@ -1,6 +1,6 @@
 import ClassBasedTodo from "./ClassBasedTodo";
 
-const SimpleTodos = () => {
+const Todos = () => {
   return (
     <div className="container">
       <ClassBasedTodo />
@@ -8,4 +8,4 @@ const SimpleTodos = () => {
   );
 };
 
-export default SimpleTodos;
+export default Todos;

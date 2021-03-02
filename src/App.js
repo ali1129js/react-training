@@ -1,10 +1,10 @@
-import SimpleTodos from "./examples/SimpleToDo";
+import Todos from "./examples/Todos/Todos";
 import "./app.css";
 
 const App = () => {
   return (
     <div className="App">
-      <SimpleTodos />
+      <Todos />
     </div>
   );
 };
