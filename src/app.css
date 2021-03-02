@@ -1,4 +1,5 @@
 .App {
   margin: 50px;
-  border: 1px solid blue;
+
+  width: 80%;
 }

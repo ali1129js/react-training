@@ -1,5 +1,11 @@
-const SimpleToDo = () => {
-  return <h1>Simple ToDO</h1>;
+import ClassBasedTodo from "./ClassBasedTodo";
+
+const SimpleTodos = () => {
+  return (
+    <div className="container">
+      <ClassBasedTodo />
+    </div>
+  );
 };
 
-export default SimpleToDo;
+export default SimpleTodos;
