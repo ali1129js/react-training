@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import TodosClass from "./TodosClass";
+import InputClass from "./InputClass";
+
 class ClassBasedTodo extends Component {
   constructor() {
     super();
@@ -41,13 +43,11 @@ class ClassBasedTodo extends Component {
   render() {
     return (
       <div className="classbased">
-        <input
-          type="text"
-          placeholder="Enter a new Task"
-          onChange={this.handleChange}
-          value={this.state.inputValue}
+        <InputClass
+          handleClick={this.handleClick}
+          handleChange={this.handleChange}
+          inputValue={this.state.inputValue}
         />
-        <input type="submit" value="Submit" onClick={this.handleClick} />
         <div className="todos">
           <TodosClass
             todos={this.state.todos}
