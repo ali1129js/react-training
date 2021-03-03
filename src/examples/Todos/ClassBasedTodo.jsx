@@ -22,10 +22,12 @@ class ClassBasedTodo extends Component {
     };
   }
 
+  //update State from input
   handleChange = (e) => {
     this.setState({ inputValue: e.target.value });
   };
 
+  // Add new Task
   handleClick = () => {
     const newTask = {
       text: this.state.inputValue,
@@ -34,18 +36,19 @@ class ClassBasedTodo extends Component {
     };
     this.setState({ todos: [newTask, ...this.state.todos], inputValue: "" });
   };
-
+  // remove a Task
   handleRemove = (i) => {
     const newArr = [...this.state.todos];
     newArr.splice(i, 1);
     this.setState({ todos: newArr });
   };
-
+  // Checked/unchecked
   handleCheckbox = (i) => {
     const newArr = [...this.state.todos];
     newArr[i].isCompleted = !newArr[i].isCompleted;
     this.setState({ todos: newArr });
   };
+
   render() {
     return (
       <div className="classbased">

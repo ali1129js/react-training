@@ -8,7 +8,7 @@ const TodosClass = ({ todos, handleRemove, handleCheckbox }) => {
             checked={todo.isCompleted}
             onChange={() => handleCheckbox(i)}
           />
-          <button onClick={() => handleRemove(i)}>Remove</button>
+          <input type="Submit" value="Remove" onClick={() => handleRemove(i)} />
           {todo.text}
         </li>
       ))}
