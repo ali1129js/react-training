@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+import TodosClass from "./TodosClass";
 class ClassBasedTodo extends Component {
   constructor() {
     super();
@@ -32,10 +32,15 @@ class ClassBasedTodo extends Component {
     };
     this.setState({ todos: [newTask, ...this.state.todos], inputValue: "" });
   };
+
+  handleRemove = (i) => {
+    const newArr = [...this.state.todos];
+    newArr.splice(i, 1);
+    this.setState({ todos: newArr });
+  };
   render() {
     return (
       <div className="classbased">
-        Add a new Task :
         <input
           type="text"
           placeholder="Enter a new Task"
@@ -44,9 +49,10 @@ class ClassBasedTodo extends Component {
         />
         <input type="submit" value="Submit" onClick={this.handleClick} />
         <div className="todos">
-          {this.state.todos.map((todo) => (
-            <li key={todo.id}>{todo.text}</li>
-          ))}
+          <TodosClass
+            todos={this.state.todos}
+            handleRemove={this.handleRemove}
+          />
         </div>
       </div>
     );
