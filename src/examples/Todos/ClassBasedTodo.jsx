@@ -40,6 +40,12 @@ class ClassBasedTodo extends Component {
     newArr.splice(i, 1);
     this.setState({ todos: newArr });
   };
+
+  handleCheckbox = (i) => {
+    const newArr = [...this.state.todos];
+    newArr[i].isCompleted = !newArr[i].isCompleted;
+    this.setState({ todos: newArr });
+  };
   render() {
     return (
       <div className="classbased">
@@ -52,6 +58,7 @@ class ClassBasedTodo extends Component {
           <TodosClass
             todos={this.state.todos}
             handleRemove={this.handleRemove}
+            handleCheckbox={this.handleCheckbox}
           />
         </div>
       </div>
