@@ -1,9 +1,15 @@
 import ClassBasedTodo from "./ClassBasedTodo";
+import HooksBasedTodo from "./HooksBasedTodo";
 
 const Todos = () => {
   return (
     <div className="container">
-      <ClassBasedTodo />
+      <div className="classcontainer">
+        <ClassBasedTodo />
+      </div>
+      <div className="hookscontainer">
+        <HooksBasedTodo />
+      </div>
     </div>
   );
 };

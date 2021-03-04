@@ -52,6 +52,7 @@ class ClassBasedTodo extends Component {
   render() {
     return (
       <div className="classbased">
+        <h3>Class Based Todo list</h3>
         <InputClass
           handleClick={this.handleClick}
           handleChange={this.handleChange}

@@ -1,9 +1,15 @@
 .App {
   margin: 50px;
 
-  width: 80%;
+  width: 40%;
 }
-
+.classcontainer {
+  border: 1px solid grey;
+}
+.hookscontainer {
+  margin-top: 20px;
+  border: 1px solid darkblue;
+}
 ul {
   font-size: 1.5rem;
 }
