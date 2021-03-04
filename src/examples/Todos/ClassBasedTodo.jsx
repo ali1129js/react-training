@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import TodosClass from "./TodosClass";
 import InputClass from "./InputClass";
 
+const URL = "http://localhost:5000/";
 class ClassBasedTodo extends Component {
   constructor() {
     super();
@@ -20,6 +21,13 @@ class ClassBasedTodo extends Component {
       ],
       inputValue: "",
     };
+  }
+
+  // fetch some fake data
+  componentDidMount() {
+    fetch(URL)
+      .then((res) => res.json())
+      .then((data) => this.setState({ todos: data }));
   }
 
   //update State from input
